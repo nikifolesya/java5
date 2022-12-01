@@ -2,6 +2,7 @@
 import java.awt.image.BufferedImage;
 import java.awt.Dimension;
 import java.awt.Graphics;
+
 public class JImageDisplay extends javax.swing.JComponent{
     //приватное поле для управления изображением, содержимое которого можно записать
     private BufferedImage img; 
@@ -32,5 +33,10 @@ public class JImageDisplay extends javax.swing.JComponent{
     //метод, который устанавливает пиксель в определенный цвет
     public void drawPixel(int x, int y, int rgbColor) {
         img.setRGB(x, y, rgbColor);
+    }
+
+    //геттер для приватной переменной объекта класса BufferedImage, для получения изображения
+    public BufferedImage getImage(){
+        return img;
     }
 }
